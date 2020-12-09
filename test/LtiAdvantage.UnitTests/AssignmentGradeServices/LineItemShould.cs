@@ -26,6 +26,7 @@ namespace LtiAdvantage.UnitTests.AssignmentGradeServices
             Assert.Equal("1g3k4dlk49fk", lineitem.ResourceLinkId);
             Assert.Equal(DateTime.Parse("2018-03-06T20:05:02Z", null, DateTimeStyles.AdjustToUniversal), lineitem.StartDateTime);
             Assert.Equal(DateTime.Parse("2018-04-06T22:05:03Z", null, DateTimeStyles.AdjustToUniversal), lineitem.EndDateTime);
+            Assert.NotNull(lineitem.SubmissionReview);
         }
 
         /// <summary>

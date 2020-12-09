@@ -1,0 +1,9 @@
+{
+  "reviewableStatus": [ "InProgress", "Submitted", "Completed" ],
+  "label": "Open My Tool Viewer",
+  "url": "https://platform.example.com/act/849023/sub",
+  "custom": {
+    "action": "review",
+    "a_id": "23942"
+  }
+}

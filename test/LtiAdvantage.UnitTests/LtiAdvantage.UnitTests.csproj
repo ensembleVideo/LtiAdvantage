@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.1;netcoreapp3.1</TargetFrameworks>
@@ -48,6 +48,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\LtiAdvantage\LtiAdvantage.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ReferenceJson\SubmissionReview.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
