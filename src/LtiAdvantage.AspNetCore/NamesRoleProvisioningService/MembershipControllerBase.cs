@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using LtiAdvantage.Lti;
+using LtiAdvantage.NamesRoleProvisioningService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
@@ -9,7 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace LtiAdvantage.NamesRoleProvisioningService
+namespace LtiAdvantage.AspNetCore.NamesRoleProvisioningService
 {
     /// <inheritdoc cref="ControllerBase" />
     /// <summary>
