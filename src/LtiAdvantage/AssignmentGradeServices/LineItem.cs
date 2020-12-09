@@ -56,5 +56,12 @@ namespace LtiAdvantage.AssignmentGradeServices
         /// </summary>
         [JsonProperty("tag")]
         public string Tag { get; set; }
+
+        /// <summary>
+        /// Optional submission review.
+        /// </summary>
+        [JsonProperty("submissionReview")]
+        public SubmissionReview SubmissionReview { get; set; }
+
     }
 }

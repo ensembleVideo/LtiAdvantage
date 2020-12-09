@@ -334,6 +334,11 @@
             Optional tag.
             </summary>
         </member>
+        <member name="P:LtiAdvantage.AssignmentGradeServices.LineItem.SubmissionReview">
+            <summary>
+            Optional submission review.
+            </summary>
+        </member>
         <member name="T:LtiAdvantage.AssignmentGradeServices.LineItemContainer">
             <inheritdoc />
             <summary>
@@ -612,6 +617,31 @@
             <param name="lineItemId">The line item id.</param>
             <param name="scoreId">The score id.</param>
             <returns>The score.</returns>
+        </member>
+        <member name="T:LtiAdvantage.AssignmentGradeServices.SubmissionReview">
+            <summary>
+            Indicator that submissions for a line item are reviewable.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.AssignmentGradeServices.SubmissionReview.ReviewableStatus">
+            <summary>
+            Required list of AGS activity progress statuses indicating when a submission review link should be displayed.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.AssignmentGradeServices.SubmissionReview.Label">
+            <summary>
+            Optional label.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.AssignmentGradeServices.SubmissionReview.Url">
+            <summary>
+            Optional url.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.AssignmentGradeServices.SubmissionReview.Custom">
+            <summary>
+            Key/value custom parameters.
+            </summary>
         </member>
         <member name="T:LtiAdvantage.AssignmentGradeServices.UpdateLineItemRequest">
             <summary>
@@ -1449,6 +1479,11 @@
             Optional tag.
             </summary>
         </member>
+        <member name="P:LtiAdvantage.DeepLinking.LineItemProperty.SubmissionReview">
+            <summary>
+            Optional submission review.
+            </summary>
+        </member>
         <member name="T:LtiAdvantage.DeepLinking.LinkItem">
             <inheritdoc cref="T:LtiAdvantage.DeepLinking.ILinkItem" />
             <summary>
@@ -1572,6 +1607,31 @@
         <member name="P:LtiAdvantage.DeepLinking.StartEndProperty.StartDateTime">
             <summary>
             Optional start date and time.
+            </summary>
+        </member>
+        <member name="T:LtiAdvantage.DeepLinking.SubmissionReviewProperty">
+            <summary>
+            Indicator that submissions for a line item are reviewable.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DeepLinking.SubmissionReviewProperty.ReviewableStatus">
+            <summary>
+            Required list of AGS activity progress statuses indicating when a submission review link should be displayed.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DeepLinking.SubmissionReviewProperty.Label">
+            <summary>
+            Optional label.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DeepLinking.SubmissionReviewProperty.Url">
+            <summary>
+            Optional url.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DeepLinking.SubmissionReviewProperty.Custom">
+            <summary>
+            Key/value custom parameters.
             </summary>
         </member>
         <member name="T:LtiAdvantage.DeepLinking.WindowProperty">

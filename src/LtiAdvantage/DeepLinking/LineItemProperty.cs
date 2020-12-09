@@ -30,5 +30,11 @@ namespace LtiAdvantage.DeepLinking
         /// </summary>
         [JsonProperty("tag")]
         public string Tag { get; set; }
+
+        /// <summary>
+        /// Optional submission review.
+        /// </summary>
+        [JsonProperty("submissionReview")]
+        public SubmissionReviewProperty SubmissionReview { get; set; }
     }
 }
