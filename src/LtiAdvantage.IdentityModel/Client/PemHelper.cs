@@ -48,30 +48,30 @@ namespace LtiAdvantage.IdentityModel.Client
         /// Create a new private/public key pair as PEM formatted strings.
         /// </summary>
         /// <returns>An <see cref="RsaKeyPair"/>.</returns>
-        public static RsaKeyPair GenerateRsaKeyPair()  
-        {  
-            var rsaGenerator = new RsaKeyPairGenerator();  
-            rsaGenerator.Init(new KeyGenerationParameters(new SecureRandom(), 2048));  
-            var keyPair = rsaGenerator.GenerateKeyPair();  
-  
+        public static RsaKeyPair GenerateRsaKeyPair()
+        {
+            var rsaGenerator = new RsaKeyPairGenerator();
+            rsaGenerator.Init(new KeyGenerationParameters(new SecureRandom(), 2048));
+            var keyPair = rsaGenerator.GenerateKeyPair();
+
             var rsaKeyPair = new RsaKeyPair();
-            
-            using (var privateKeyTextWriter = new StringWriter())  
-            {  
-                var pemWriter = new PemWriter(privateKeyTextWriter);  
-                pemWriter.WriteObject(keyPair.Private);  
+
+            using (var privateKeyTextWriter = new StringWriter())
+            {
+                var pemWriter = new PemWriter(privateKeyTextWriter);
+                pemWriter.WriteObject(keyPair.Private);
                 pemWriter.Writer.Flush();
 
                 rsaKeyPair.PrivateKey = privateKeyTextWriter.ToString();
-            }  
-  
-            using (var publicKeyTextWriter = new StringWriter())  
-            {  
-                var pemWriter = new PemWriter(publicKeyTextWriter);  
-                pemWriter.WriteObject(keyPair.Public);  
-                pemWriter.Writer.Flush();  
-  
-                rsaKeyPair.PublicKey = publicKeyTextWriter.ToString();  
+            }
+
+            using (var publicKeyTextWriter = new StringWriter())
+            {
+                var pemWriter = new PemWriter(publicKeyTextWriter);
+                pemWriter.WriteObject(keyPair.Public);
+                pemWriter.Writer.Flush();
+
+                rsaKeyPair.PublicKey = publicKeyTextWriter.ToString();
             }
 
             return rsaKeyPair;
@@ -82,13 +82,13 @@ namespace LtiAdvantage.IdentityModel.Client
         /// </summary>
         /// <param name="privateKey">The private key.</param>
         /// <returns>The private key as an <see cref="RsaSecurityKey"/>.</returns>
-        public static SigningCredentials SigningCredentialsFromPemString(string privateKey)  
-        {  
-            using (var keyTextReader = new StringReader(privateKey))  
-            {  
-                var cipherKeyPair = (AsymmetricCipherKeyPair)new PemReader(keyTextReader).ReadObject();  
-  
-                var keyParameters = (RsaPrivateCrtKeyParameters) cipherKeyPair.Private;  
+        public static SigningCredentials SigningCredentialsFromPemString(string privateKey)
+        {
+            using (var keyTextReader = new StringReader(privateKey))
+            {
+                var cipherKeyPair = (AsymmetricCipherKeyPair)new PemReader(keyTextReader).ReadObject();
+
+                var keyParameters = (RsaPrivateCrtKeyParameters)cipherKeyPair.Private;
                 var parameters = new RSAParameters
                 {
                     Modulus = keyParameters.Modulus.ToByteArrayUnsigned(),
@@ -102,7 +102,7 @@ namespace LtiAdvantage.IdentityModel.Client
                 };
                 var key = new RsaSecurityKey(parameters);
                 return new SigningCredentials(key, SecurityAlgorithms.RsaSha256);
-            }  
+            }
         }
 
         /// <summary>

@@ -36,7 +36,7 @@ namespace LtiAdvantage.Utilities
         {
             return string.IsNullOrWhiteSpace(value);
         }
-        
+
         [DebuggerStepThrough]
         public static bool IsPresent(this string value)
         {
