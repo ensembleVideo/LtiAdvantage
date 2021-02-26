@@ -1599,6 +1599,292 @@
             Comma-separate list of features for window.open().
             </summary>
         </member>
+        <member name="T:LtiAdvantage.DynamicRegistration.LtiPlatformConfiguration">
+            <summary>
+            LTI-specific platform configuration details.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.LtiPlatformConfiguration.ProductFamilyCode">
+            <summary>
+            Product identifier for the platform.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.LtiPlatformConfiguration.Version">
+            <summary>
+            Version of the software running the platform.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.LtiPlatformConfiguration.MessagesSupported">
+            <summary>
+            Array of LTI message types supported by the platform.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.LtiPlatformConfiguration.Placements">
+            <summary>
+            Optional array of placements where platform supports this message type.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.LtiPlatformConfiguration.Variables">
+            <summary>
+            Optional array of supported substitution parameters.
+            </summary>
+        </member>
+        <member name="T:LtiAdvantage.DynamicRegistration.LtiToolConfiguration">
+            <summary>
+            LTI-specific tool configuration details.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.LtiToolConfiguration.Domain">
+            <summary>
+            Primary tool domain.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.LtiToolConfiguration.SecondaryDomains">
+            <summary>
+            Optional array of secondary tool domains.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.LtiToolConfiguration.DeploymentId">
+            <summary>
+            Optional LTI deployment_id associated with this client registration's deployment.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.LtiToolConfiguration.TargetLinkUri">
+            <summary>
+            Default target link uri.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.LtiToolConfiguration.CustomParameters">
+            <summary>
+            Optional JSON object representing tool's custom parameters.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.LtiToolConfiguration.Description">
+            <summary>
+            Optional tool description.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.LtiToolConfiguration.Messages">
+            <summary>
+            Array of LTI message types supported by the tool.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.LtiToolConfiguration.Claims">
+            <summary>
+            Array of claims desired by tool to be included in id token.
+            </summary>
+        </member>
+        <member name="T:LtiAdvantage.DynamicRegistration.PlatformConfiguration">
+            <summary>
+            Platform OpenID configuration.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.Issuer">
+            <summary>
+            Platform's issuer value.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.AuthorizationEndpoint">
+            <summary>
+            URL of the OAuth 2.0 Authorization Endpoint.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.RegistrationEndpoint">
+            <summary>
+            URL of the registration endpoint.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.JwksUri">
+            <summary>
+            URL of the platform JWK set endpoint.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.TokenEndpoint">
+            <summary>
+            URL for access token requests from tool.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.TokenEndpointAuthMethodsSupported">
+            <summary>
+            Supported token endpoint authorization methods.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.TokenEndpointAuthSigningAlgValuesSupported">
+            <summary>
+            Supported token endpoint signature algorithms.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.ScopesSupported">
+            <summary>
+            Required OpenID and supported LTI service scopes.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.ResponseTypesSupported">
+            <summary>
+            Supported token response types.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.IdTokenSigningAlgValuesSupported">
+            <summary>
+            Supported id_token signature algorithms.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.ClaimsSupported">
+            <summary>
+            OpenID claims supported by the platform.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.AuthorizationServer">
+            <summary>
+            Optional authorization server identifier to be used as the aud when requesting an access token. Defaults to value set in <see cref="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.TokenEndpoint"/>.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformConfiguration.LtiPlatformConfiguration">
+            <summary>
+            LTI-specific platform configuration details.
+            </summary>
+        </member>
+        <member name="T:LtiAdvantage.DynamicRegistration.PlatformSupportedMessage">
+            <summary>
+            Represents a supported LTI message type.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformSupportedMessage.Type">
+            <summary>
+            The message type.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.PlatformSupportedMessage.Placements">
+            <summary>
+            Optional array of placements where platform supports this message type.
+            </summary>
+        </member>
+        <member name="T:LtiAdvantage.DynamicRegistration.ToolConfiguration">
+            <summary>
+            Tool OpenID configuration.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.ClientId">
+            <summary>
+            Tool's client identifier. Only available in tool configuration provided by platform after successful registration.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.RegistrationClientUri">
+            <summary>
+            Optional platform client registration url. Only available in tool configuration provided by platform
+            after successful registration. Used for configuration retrieval and potential modification.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.ApplicationType">
+            <summary>
+            The application type.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.GrantTypes">
+            <summary>
+            Required OpenID connect grant types.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.ResponseTypes">
+            <summary>
+            Accepted token response types.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.RedirectUris">
+            <summary>
+            Tool redirect uris.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.InitiateLoginUri">
+            <summary>
+            URI used by the platform to initiate the LTI launch.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.ClientName">
+            <summary>
+            Tool name.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.JwksUri">
+            <summary>
+            URL of the tool JWK set endpoint.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.LogoUri">
+            <summary>
+            Optional tool logo URL.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.TokenEndpointAuthMethod">
+            <summary>
+            Tool token endpoint authentication method.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.Contacts">
+            <summary>
+            Optional array of tool contacts.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.ClientUri">
+            <summary>
+            Optional url of valid web page containing tool information.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.TosUri">
+            <summary>
+            Optional url of valid web page containing tool's terms of service.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.PolicyUri">
+            <summary>
+            Optional url of valid web page containing policy regarding profile data usage.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.Scope">
+            <summary>
+            Space-separated list of scope values the tool requests access to.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolConfiguration.LtiToolConfiguration">
+            <summary>
+            LTI-specific tool configuration details.
+            </summary>
+        </member>
+        <member name="T:LtiAdvantage.DynamicRegistration.ToolSupportedMessage">
+            <summary>
+            Represents an LTI message type supported by a tool.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolSupportedMessage.Type">
+            <summary>
+            The message type.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolSupportedMessage.TargetLinkUri">
+            <summary>
+            Optional target link uri for this message type if different than tool default.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolSupportedMessage.Label">
+            <summary>
+            Optional label platform may apply to target link.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolSupportedMessage.IconUri">
+            <summary>
+            Optional icon platform may apply to target link.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolSupportedMessage.CustomParameters">
+            <summary>
+            Optional JSON object representing message-specific custom parameters. Overrides custom parameters defined at tool-level.
+            </summary>
+        </member>
+        <member name="P:LtiAdvantage.DynamicRegistration.ToolSupportedMessage.Placements">
+            <summary>
+            Optional array of placements where platform should add links for this tool.
+            </summary>
+        </member>
         <member name="T:LtiAdvantage.Lti.ContextClaimValueType">
             <summary>
             Properties of the context from which the launch originated (for example, course id and title).
